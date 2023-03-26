@@ -16,7 +16,7 @@ local packer_bootstrap = ensure_packer() -- true if  packer was just installed
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync 
   augroup end
 ]])
 
@@ -30,7 +30,13 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("bluz71/vim-nightfly-guicolors")
 
+	-- tmux & split window navigation
+  use("christoomey/vim-tmux-navigator") -- enaables splitscreen navigation between splits via CTRL+jklh
+
+  use("szw/vim-maximizer")
+
 	if packer_bootstrap then 
 		require("packer").sync()
 	end
 end)
+
