@@ -1,5 +1,10 @@
-brew install nvim 
+## install nevessary applications
 
+`
+brew install nvim      // nvim itself 
+brew install ripgrep   // telescope needs it to fuzzyfind texts
+xcode-select --install // install make necessary for telescope-fzf-native.nvim plugin
+`
 
 ## create config directory structure 
 
@@ -24,3 +29,12 @@ touch ~/.config/nvim/lua/truehl/core/keymaps.lua
         ├── plugins
         └── plugins-setup.lua
 `
+
+create the basic vim configuration by editing init.lua. 
+
+## package manager "packer"
+
+## sources 
+
+https://www.youtube.com/watch?v=vdn_pKJUda8
+
