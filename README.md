@@ -6,6 +6,15 @@ brew install ripgrep   // telescope needs it to fuzzyfind texts
 xcode-select --install // install make necessary for telescope-fzf-native.nvim plugin
 `
 
+## installing nerd fonts 
+https://www.geekbits.io/how-to-install-nerd-fonts-on-mac/
+
+`
+brew tap homebrew/cask-fonts
+brew install --cask <font>
+brew install --cask font-hack-nerd-font
+`
+
 ## create config directory structure 
 
 mkdir -p ~/.config/nvim/lua/truehl/core

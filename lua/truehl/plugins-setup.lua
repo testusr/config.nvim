@@ -28,13 +28,34 @@ end
 
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
-	use("bluz71/vim-nightfly-guicolors")
+	use("bluz71/vim-nightfly-guicolors") -- preffered colorscheme   
+
+  use("nvim-lua/plenary.nvim") -- lua functions that many plugins use 
 
 	-- tmux & split window navigation
   use("christoomey/vim-tmux-navigator") -- enaables splitscreen navigation between splits via CTRL+jklh
 
   use("szw/vim-maximizer")
 
+  -- essential plugins
+  use("tpope/vim-surround")
+  use("vim-scripts/ReplaceWithRegister")
+
+  -- commenting with gc
+  use("numToStr/Comment.nvim") -- commeting one or several lines with gcc or gc<num>j
+
+  -- file explorer 
+  use("nvim-tree/nvim-tree.lua") 
+
+  -- icons
+  use("kyazdani42/nvim-web-devicons")
+
+  -- statusline 
+  use("nvim-lualine/lualine.nvim")
+
+  -- fuzzy finding 
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- deep  
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 	if packer_bootstrap then 
 		require("packer").sync()
 	end
