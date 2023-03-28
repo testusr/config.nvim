@@ -56,6 +56,18 @@ return packer.startup(function(use)
   -- fuzzy finding 
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- deep  
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+
+  -- autocomopletion 
+  use("hrsh7th/nvim-cmp") -- do make actual autocomplete suggestions 
+  use("hrsh7th/cmp-buffer") -- src which will allow cmp to suggest words
+  use("hrsh7th/cmp-path") -- src which will allow cmp to make path suggestions
+  
+  -- snippets / collections of usefull snippets for a lot of languages 
+  use("l3MON4D3/LuaSnip")
+  use("saadparwaiz1/cmp_luasnip")
+  use("rafamadriz/friendly-snippets")
+
+
 	if packer_bootstrap then 
 		require("packer").sync()
 	end
